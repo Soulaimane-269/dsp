@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+ 
+{% block body %}
+    
+ 
+    <div class ="row">
+            <div class="col-4 mb-2">
+                <img src = "{{asset('img/' ~ product.image)}}" alt="" class="img-fluid">
+                <h3>{{product.name}}</h3>
+                <p>{{product.price | format_currency('EUR', locale='fr')}}</p>
+                <a href="{{url('product.details',{id: product.id})}}" type="button" class="btn btn-primary">Details</a>
+            </div>
+    </div>
+    
+{% endblock %}
